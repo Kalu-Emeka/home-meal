@@ -5,23 +5,59 @@ body {
   font-family: "Poppins", ;
   /* background-color: #151515; */
 }
-.active {
-  color: #FE9226;
-}
-.hh {
-  color: rgb(71, 71, 71);
-}
-.header  {
-  background-image: url("../public/Images/home-bg.jpg");
-  background-position: center;
+#contact {
+  background-image: url("/Images/ii.jpg");
+  background-position: left center;
   background-size: cover;
 }
-.f input {
+.inn {
   outline: none;
 }
-.t input {
-  outline: none;
+.swiper-button-prev {
+  position: absolute;
+  top: 80%;
+  left: 80%;
 }
-.tx textarea{
-  outline: none;
+.swiper-button-prev:after {
+  font-size: 22px;
+  background-color: #D37430;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 30px;
+}
+.swiper-button-next:after {
+  font-size: 22px;
+  background-color: #D37430;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 30px;
+}
+.swiper-button-next {
+  position: absolute;
+  top: 80%;
+  right: 13%;
+}
+.swiper2 .swiper-button-prev  {
+  position: absolute;
+  top: 90%;
+  left: 80%;
+}
+.swiper2 .swiper-button-next {
+  position: absolute;
+  top: 90%;
+  right: 13%;
+}
+.swiper2 .swiper-button-prev:after {
+  font-size: 22px;
+  background-color: #D37430;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 30px;
+}
+.swiper2 .swiper-button-next:after {
+   font-size: 22px;
+  background-color: #D37430;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 30px;
 }

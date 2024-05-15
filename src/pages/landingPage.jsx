@@ -1,269 +1,251 @@
-import { useState } from 'react';
 import Navbar from '../components/nav.jsx'
-import Footer from '../components/footer.jsx'
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { ReactTyped } from "react-typed";
-import ProgressBar from "@ramonak/react-progress-bar";
 
 function LandingPage () {
-    const [openModal, setOpenModal]  = useState(false);
     return (
         <>
             <Navbar/>
-            <div className="header flex justify-center pt-[170px] pr-[100px] pb-[150px] pl-[80px] items-center text-black bg-[#878e99] sm:pr-[30px] sm:pl-[30px] lg:pr-[100px] lg:pl-[80px]" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <div className="w-[150%] text-left sm:w-[100%] sm:text-center md:text-left lg:text-left">
-                    <h2 className="tracking-widest mb-4 text-[20px] sm:text-[17px] md:text-[20px]">WELCOME TO MY WORLD</h2>
-                    <h1 className='text-[50px] font-bold mb-[10px] text-[#ff014f] sm:text-[30px] md:text-[50px]'>Hi, I'm Emeka <span className='text-[#ff014f]'>Kalu</span></h1>
-                    <h1 className='text-[50px] font-bold mb-[10px] text-[#1e2125] sm:text-[30px] md:text-[50px]'>a <span className='text-[#ff014f]'>
-                        <ReactTyped
-                        strings={["Front-End Developer.", "Freelancer.", "Website Desginer.", "Graphic Designer.",]}
-                        typeSpeed={50}
-                        backSpeed={30}
-                        loop
-                        >
-                        </ReactTyped>
-                    </span></h1>
-                    <p className='w-[40%] text-[#3c3e41] text-bold text-[18px] mb-7 sm:text-[16px] sm:w-[100%] md:w-[70%] lg:w-[40%]'>Based in Nigeria, I'm a Proven success in boosting website performance and stability through regular maintenance and troubleshooting.</p>
-                    <button className='flex justify-center items-center p-[10px] rounded-md text-[13px] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce sm:w-full md:w-[30%] lg:w-[20%]' type="button"><a href="#contact">Contact Me</a></button>
+            <div className="grid grid-cols-2 gap-1 pt-[150px] pr-[100px] pb-[150px] pl-[80px] text-black bg-[#FFF5F5] sm:pr-[30px] sm:pl-[30px] lg:pr-[100px] lg:pl-[80px]" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <div className="w-[150%] text-left mt-[70px] sm:w-[100%] sm:text-center md:text-left lg:text-left">
+                    <h1 className='text-[60px] font-bold mb-[10px] text-[#40455B] w-[90%]'>Eat Fresh Food Stay Healthy.</h1>
+                    <p className='w-[100%] text-[#3c3e41] font-medium mt-[25px] text-[18px] mb-7 sm:text-[16px] sm:w-[100%] md:w-[70%] lg:w-[70%]'>Continually embrace functional vortals vis-a-vis user friendly processes target maintainable</p>
+                    <button className='flex justify-center items-center p-[10px] rounded-md text-[13px] text-center font-medium shadow-md text-white hover:bg-[#D38000] bg-[#D37430] animate-bounce sm:w-full md:w-[30%] lg:w-[20%]' type="button"><a href="#service">View Menu</a></button>
+                    <div className="grid grid-cols-4 gap-1 pt-[60px] w-[30%]">
+                        <img className='w-[60%] cursor-pointer' src="./Images/Frame 630354.png" alt="" />
+                        <img className='w-[60%] cursor-pointer' src="./Images/Frame 630355.png" alt="" />
+                        <img className='w-[60%] cursor-pointer' src="./Images/Frame 630357.png" alt="" />
+                        <img className='w-[60%] cursor-pointer' src="./Images/download.png" alt="" />
+                    </div>
+                </div>
+                <div className='w-[90%]'>
+                    <img className='' src="./Images/i4.jpg" alt="" />
                 </div>
             </div>
-            <section id="features" className='bg-[#E4E4E4] p-20 sm:p-[25px] md:p-[25px] lg:p-20'  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <h1 className='text-[#ff014f] text-thin text-[20px]'>FEATURES</h1>
-                <h2 className='text-[60px] text-[#3c3e41] font-bold mt-2 sm:text-[40px] md:text-[50px] lg:text-[60px]'>What I Do</h2>
-                <div className="grid grid-cols-3 gap-4 mt-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    <div className="shadow-lg rounded-lg p-12 w-[100%] sm:p-[20px] md:p-[35px] lg:p-12 sm:w-[100%] md:w-[100%] lg:w-[100%]">
-                        <img src="./Images/monitor.png" className='m w-[20%] mb-4 text-white' alt="" />
-                        <h1 className='text-[25px]'>Web Development</h1>
-                        <p className='text-[17px] w-[108%] mt-4 sm:text-[14px] md:text-[17px] lg:text-[17px]'>I build outstanding websites, user friendly and responsive design making users to have an outsanding experience</p>
-                    </div>
-                    <div className=" shadow-lg p-12 rounded-lg w-[100%] sm:p-[20px] md:p-[35px] lg:p-12 md:w-[100%] lg:w-[100%]">
-                        <img src="./Images/graphic-design.png" className='m w-[20%] mb-4 text-white' alt="" />
-                        <h1 className='text-[25px]'>Web Designing</h1>
-                        <p className='text-[17px] w-[108%] mt-4 sm:text-[14px] md:text-[17px] lg:text-[17px]'>Designing incredible websites template, for users to implement easily without struggling with the codes</p>
-                    </div>
-                    <div className=" shadow-lg p-12 w-[100%] rounded-lg sm:p-[20px] md:p-[35px] lg:p-12 md:w-[100%] lg:w-[100%]">
-                        <img src="./Images/camera.png" className='m w-[20%] mb-4 text-white' alt="" />     
-                        <h1 className='text-[25px]'>Photo Editing</h1>
-                        <p className='text-[17px] w-[108%] mt-4 sm:text-[14px] md:text-[17px] lg:text-[17px]'>In depth understanding on photo editing using Photoshop, enabling the quality and color enhancement</p>
-                    </div>
-                    <div className=" shadow-lg p-12 w-[100%] rounded-lg sm:p-[20px] md:p-[35px] lg:p-12 md:w-[100%] lg:w-[100%]">
-                        <img src="./Images/expertise.png" className='m w-[20%] mb-4 text-white' alt="" />
-                        <h1 className='text-[25px]'>Business Strategy</h1>
-                        <p className='text-[18px] w-[108%] mt-4 sm:text-[14px] md:text-[17px] lg:text-[17px]'>Have knowledge and ideas on business startup and planning, also giving solutions to business</p>
-                    </div>
-                    <div className=" shadow-lg p-12 w-[100%] rounded-lg sm:p-[20px] md:p-[35px] lg:p-12 md:w-[100%] lg:w-[100%]">
-                        <img src="./Images/drawing.png" className='m w-[20%] mb-4 text-white' alt="" />
-                        <h1 className='text-[25px]'>Graphic Designing</h1>
-                        <p className='text-[18px] w-[108%] mt-4 sm:text-[14px] md:text-[17px] lg:text-[17px]'>Intensive Understanding on graphic designs, using Corel-Draw to implement users personal designs</p>
-                    </div>
-                    <div className=" shadow-lg p-12 w-[100%] rounded-lg sm:p-[20px] md:p-[35px] lg:p-12 md:w-[100%] lg:w-[100%]">
-                        <img src="./Images/self-employed.png" className='m w-[20%] mb-4 text-white' alt="" />
-                        <h1 className='text-[25px]'>Freelancing</h1>
-                        <p className='text-[18px] w-[108%] mt-4 sm:text-[14px] md:text-[17px] lg:text-[17px]'>Taking multiple projects with different clients, can also work on specfic projects</p>
+            <div className='fixed w-full top-[70%] left-[96%]'>
+                <img className='w-[3.5%] rounded-full cursor-pointer shadow-lg' src="./Images/cart.jpg" alt="" />
+            </div>
+            <section id='features'>
+                <div className='pt-[150px] pb-[10px] pl-[80px]'>
+                    <div>
+                        <h1 className='text-[45px] font-bold mb-[10px] text-[#40455B] w-[30%] leading-[55px]'>Week Top & Popular Dish</h1>
+                        <img className='flex justify-center items-center w-[14%] ml-[20px]' src="./Images/Vector 1.png" alt="" />
                     </div>
                 </div>
-            </section>
-            <hr className="hh"/>
-            <section id='skills' className='bg-[#E4E4E4] p-20 sm:p-[25px] md:p-[25px] lg:p-20'  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <h1 className='text-[#ff014f] text-thin text-[20px]'>EXPERIENCE</h1>
-                <h2 className='text-[60px] text-[#3c3e41] font-bold mt-2 sm:text-[40px] md:text-[50px] lg:text-[60px]'>Skills</h2>
-                <div className="grid grid-cols-2 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-                    <div className="">
-                        <div className='w-full mt-10'>
-                            <h1 className='mb-3 text-[20px]'>HTML5</h1>
-                            <ProgressBar bgColor='#3e64ff' width='100%' completed="100" maxCompleted={100}></ProgressBar>
-                        </div>
-                        <div className='w-full mt-10'>
-                            <h1 className='mb-3 text-[20px]'>CSS3</h1>
-                            <ProgressBar bgColor='#3e64ff' width='100%' completed="100" maxCompleted={100} ></ProgressBar>
-                        </div>
-                    </div>      
-                    <div className="">
-                        <div className='w-full mt-10'>
-                            <h1 className='mb-3 text-[20px]'>Photoshop</h1>
-                            <ProgressBar bgColor='#3e64ff' width='100%' completed="70" maxCompleted={100}></ProgressBar>
-                        </div>
-                        <div className='w-full mt-10'>
-                            <h1 className='mb-3 text-[20px]'>CorelDraw</h1>
-                            <ProgressBar bgColor='#3e64ff' width='100%' completed="50" maxCompleted={100} ></ProgressBar>
-                        </div>
-                    </div>      
-                    <div className="">
-                        <div className='w-full mt-10'>
-                            <h1 className='mb-3 text-[20px]'>REACT</h1>
-                            <ProgressBar bgColor='#3e64ff' width='100%' completed="90" maxCompleted={100}></ProgressBar>
-                        </div>
-                        <div className='w-full mt-10'>
-                            <h1 className='mb-3 text-[20px]'>TAILWIND CSS</h1>
-                            <ProgressBar bgColor='#3e64ff' width='100%' completed="90" borderRadius="10px" maxCompleted={100} ></ProgressBar>
-                        </div>
-                    </div>  
-                    <div className="">
-                        <div className='w-full mt-10'>
-                            <h1 className='mb-3 text-[20px]'>BOOTSTRAP</h1>
-                            <ProgressBar bgColor='#3e64ff' width='100%' completed="90" maxCompleted={100}></ProgressBar>
-                        </div>
-                        <div className='w-full mt-10'>
-                            <h1 className='mb-3 text-[20px]'>SASS</h1>
-                            <ProgressBar bgColor='#3e64ff' width='100%' completed="90" borderRadius="10px" maxCompleted={100} ></ProgressBar>
-                        </div>
-                    </div>        
-                </div>     
-            </section>
-            <hr className="hh"/>
-            <section id='portfolio' className='bg-[#E4E4E4] p-20 sm:p-[25px] md:p-[25px] lg:p-20'  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <h1 className='text-[#ff014f] text-thin text-[20px]'>Projects</h1>
-                <h2 className='text-[60px] text-[#3c3e41] font-bold mt-2 sm:text-[40px] md:text-[50px] lg:text-[60px]'>Portfolio</h2>
-                <div className="grid grid-cols-3 gap-4 mt-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" type='submit'>
-                        <img src="./Images/QR-full.png" className='rounded-md w-full  mb-3' alt="" />
-                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>QR COMPONENT</h1>
-                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
-                            <p className='font-medium'>HTML</p>
-                            <p className='font-medium'>CSS</p>
-                        </div> 
-                        {/* <p className='pl-4 mb-4 w-[90%] text-[16px]'>Scan QR Code from the website to improve your coding skills on Front-End mentor</p> */}
-                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
-                    </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
-                        <img src="./Images/Sunnyside.png" className='rounded-md w-full  mb-3' alt="" />
-                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>SUNNY SIDE</h1>
-                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
-                            <p className='font-medium'>HTML</p>
-                            <p className='font-medium'>CSS</p>
-                        </div> 
-                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
-                    </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
-                        <img src="./Images/Easy-Banking.png" className='rounded-md w-full  mb-3' alt="" />
-                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>EASY BANKING</h1>
-                        <div className="flex space-x-3 pl-4 mb-7">
-                            <p className='font-medium'>HTML</p>
-                            <p className='font-medium'>CSS</p>
-                        </div> 
-                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
-                    </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
-                        <img src="./Images/Counter.png" className='rounded-md w-full  mb-3' alt="" />
-                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>COUNTER</h1>
-                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
-                            <p className='font-medium'>HTML</p>
-                            <p className='font-medium'>CSS</p>
-                            <p className='font-medium'>JAVASCRIPT</p>
-                        </div> 
-                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
-                    </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
-                        <img src="./Images/Color-Flipper.png" className='rounded-md w-full  mb-3' alt="" />
-                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>BACKGROUND FLIPPER</h1>
-                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
-                            <p className='font-medium'>HTML</p>
-                            <p className='font-medium'>CSS</p>
-                            <p className='font-medium'>JAVASCRIPT</p>
-                        </div> 
-                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
-                    </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
-                        <img src="./Images/Quiz-App.png" className='rounded-md w-full  mb-3' alt="" />
-                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>QUIZ APP</h1>
-                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
-                            <p className='font-medium'>HTML</p>
-                            <p className='font-medium'>CSS</p>
-                            <p className='font-medium'>JAVASCRIPT</p>
-                        </div> 
-                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
-                    </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
-                        <img src="./Images/Fitness Care.png" className='rounded-md w-full  mb-3' alt="" />
-                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>FITNESS CARE</h1>
-                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
-                            <p className='font-medium'>HTML</p>
-                            <p className='font-medium'>CSS</p>
-                            <p className='font-medium'>JAVASCRIPT</p>
-                        </div> 
-                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
-                    </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
-                        <img src="./Images/Xtrempay.png" className='rounded-md w-full  mb-3' alt="" />
-                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>XTREMPAY</h1>
-                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
-                            <p className='font-medium'>HTML</p>
-                            <p className='font-medium'>CSS</p>
-                            <p className='font-medium'>JAVASCRIPT</p>
-                            <p className='font-medium'>REACT</p>
-                        </div> 
-                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
-                    </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
-                        <img src="./Images/Amali.png" className='rounded-md w-full  mb-3' alt="" />
-                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>AMALI</h1>
-                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
-                            <p className='font-medium'>HTML</p>
-                            <p className='font-medium'>CSS</p>
-                            <p className='font-medium'>JAVASCRIPT</p>
-                            <p className='font-medium'>REACT</p>
-                        </div> 
-                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
-                    </div>
-                </div>
-            </section>
-            <hr className='hh'/>    
-            <section id='contact' className='bg-[#E4E4E4] p-20 sm:p-[25px] md:p-[25px] lg:p-20'  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <h1 className='text-[#ff014f] text-thin text-[20px]'>CONTACT</h1>
-                <h2 className='text-[60px] text-[#3c3e41] font-bold mt-2 sm:text-[40px] md:text-[50px] lg:text-[60px]'>CONNECT WITH ME</h2>
-                <div className="grid grid-cols-2 gap-12 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
-                    <div className="flex items-start justify-start ml-[auto] mr-[auto]  shadow-lg w-[90%] sm:w-[100%] md:w-[70%] lg:w-[90%] p-4 rounded-lg flex-col mt-10">
-                        <img src="./Images/contact1.png" className='rounded-md mb-4 w-full' alt="" />
-                        <h1 className='font-medium text-[30px] tracking-wide mb-2'>Emeka Kalu</h1>
-                        <p className='text-[20px] tracking-wide mb-2'>Chief Operating Developer</p>
-                        <p className='text-[20px] tracking-wide mb-2 w-[95%]'>I am available for freelance work. Connect with me via and call in to my account.</p>
-                        <p className='text-[20px] tracking-wide mb-2'>Phone: 09046964772</p>
-                        <p className='text-[20px] tracking-wide mb-2'>Email: brickkalu@gmail.com</p>
-                        <p className='text-[20px] tracking-wide mb-2'>Connect with me</p>
-                        <div className="flex space-x-2 mt-5">
-                            <img src="./Images/Frame 630354.png" className='w-[10%] shadow-md rounded-full p-2 cursor-pointer sm:w-[17%] md:w-[10%]' alt="" />
-                            <img src="./Images/Frame 630355.png" className='w-[10%] shadow-md rounded-full p-2 cursor-pointer sm:w-[17%] md:w-[10%]' alt="" />
-                            <img src="./Images/Frame 630357.png" className='w-[10%] shadow-md rounded-full p-2 cursor-pointer sm:w-[17%] md:w-[10%]' alt="" />
-                            <img src="./Images/download.png" className='w-[10%] shadow-md rounded-full p-2 cursor-pointer sm:w-[17%] md:w-[10%]' alt="" />
-                        </div>
-                    </div>
-                    <div className='border p-4 rounded-lg mt-10 shadow-lg ml-[auto] mr-[auto] sm:w-[100%] w-[90%] md:w-[70%] lg:w-[90%]'>
-                        <form action="" className=''>
-                            <div className="t">
-                                <div className="grid grid-cols-2 gap-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
-                                    <div className='mr-5 sm:mr-0 md:mr-0 lg:mr-5'>
-                                        <label htmlFor="" className='mb-3 text-[#3c3e41] text-[16px]'>YOUR NAME</label>
-                                        <input type="text" className='p-[12px] rounded-md bg-[#fdfefe] w-[100%]'/>
-                                    </div>
-                                    <div className='mt-0 sm:mt-2 md:mt-0 lg:mt-0'>
-                                        <label htmlFor="" className='mb-3 text-[#3c3e41] text-[16px]'>PHONE NUMBER</label>
-                                        <input type="number" className='p-[12px] rounded-md w-[100%] bg-[#fdfefe]' />
-                                    </div>
-                                </div>
-                                <div className="flex flex-col">
-                                    <label htmlFor="" className='mb-3 mt-3 text-[#3c3e41] text-[16px]'>EMAIL</label>
-                                    <input type="email" className='p-[12px] rounded-md border border-solid bg-[#fdfefe]'/>
-                                </div>
-                                <div className="flex flex-col">
-                                    <label htmlFor="" className='mb-3 mt-3 text-[#3c3e41] text-[16px]'>SUBJECT</label>
-                                    <input type="text" className='p-[12px] rounded-md border border-solid bg-[#fdfefe]'/>
-                                </div>
-                                <div className="tx flex flex-col">
-                                    <label htmlFor="" className='mb-3 mt-3 text-[#3c3e41] text-[16px]'>MESSAGE</label>
-                                    <textarea name="" id="" cols="30" rows="6" className='p-2 rounded-md bg-[#fdfefe]'></textarea>
-                                </div>
-                                <button type='button' className='mt-5 flex justify-center items-center bg-[#878e99] p-2 text-white rounded-md hover:bg-[#ff014f] hover:text-white w-full'>SEND MESSAGE</button>
+                <Swiper
+                    spaceBetween={30}
+                    centeredSlides={true}
+                    autoplay={{delay: 1500,disableOnInteraction: false,}}
+                    pagination={{clickable: true,}}
+                    navigation={true}
+                    modules={[Autoplay, Pagination, Navigation]}
+                    className="mySwiper swiper2"
+                    >
+                    <SwiperSlide>
+                        <div className='grid grid-cols-3 gap-5 pr-[100px] pl-[80px] pb-[100px]'>
+                            <div className='flex flex-col justify-center p-[30px] items-center rounded-md shadow-md border-solid'>
+                                <img className='w-[80%]' src="./Images/edit/i1.jpg" alt="" />
+                                <h2 className='text-[25px] font-bold mb-[30px] text-[#40455B]'>Spaghetti</h2>
+                                <p className='text-center w-[80%]'>Dynamically whiteboard sticky infrastructures before pandemic users. Proactively simplify open </p>
                             </div>
-                        </form>
+                            <div className='flex flex-col justify-center p-[30px] items-center rounded-md shadow-md border-solid'>
+                                <img className='w-[80%] mb-[20px]' src="./Images/edit/i5.jpg" alt="" />
+                                <h2 className='text-[25px] font-bold mb-[30px] text-[#40455B]'>Pizzal</h2>
+                                <p className='text-center w-[80%]'>Dynamically whiteboard sticky infrastructures before pandemic users. Proactively simplify open </p>
+                            </div>
+                            <div className='flex flex-col justify-center p-[30px]  items-center rounded-md shadow-md border-solid'>
+                                <img className='w-[80%]' src="./Images/edit/i4.jpg" alt="" />
+                                <h2 className='text-[25px] font-bold mb-[30px] text-[#40455B]'>Burger-pack</h2>
+                                <p className='text-center w-[80%]'>Dynamically whiteboard sticky infrastructures before pandemic users. Proactively simplify open </p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='grid grid-cols-3 gap-5 pr-[100px] pl-[80px] pb-[100px]'>
+                            <div className='flex flex-col justify-center p-[30px] items-center rounded-md shadow-md border-solid'>
+                                <img className='w-[80%]' src="./Images/m5.jpg" alt="" />
+                                <h2 className='text-[25px] font-bold mb-[30px] text-[#40455B]'>Spaghetti</h2>
+                                <p className='text-center w-[80%]'>Dynamically whiteboard sticky infrastructures before pandemic users. Proactively simplify open </p>
+                            </div>
+                            <div className='flex flex-col justify-center p-[30px] items-center rounded-md shadow-md border-solid'>
+                                <img className='w-[90%] mb-[20px]' src="./Images/i2.jpg" alt="" />
+                                <h2 className='text-[25px] font-bold mb-[30px] text-[#40455B]'>Pizzal</h2>
+                                <p className='text-center w-[80%]'>Dynamically whiteboard sticky infrastructures before pandemic users. Proactively simplify open </p>
+                            </div>
+                            <div className='flex flex-col justify-center p-[30px]  items-center rounded-md shadow-md border-solid'>
+                                <img className='w-[60%]' src="./Images/i6.jpg" alt="" />
+                                <h2 className='text-[25px] font-bold mb-[30px] text-[#40455B]'>Burger-pack</h2>
+                                <p className='text-center w-[80%]'>Dynamically whiteboard sticky infrastructures before pandemic users. Proactively simplify open </p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
+            </section>
+            <section id='about'>
+                <div  className='pt-[150px] pb-[50px] pl-[80px]'>
+                    <div className='grid grid-cols-2 gap-1'>
+                        <img className="rounded-lg w-[90%]" src="./Images/chef.jpg" alt="" />
+                        <div>
+                            <h1 className='text-[45px] font-bold  text-[#40455B] w-[90%] leading-[55px]'>A Good Food Make a Great Day</h1>
+                            <img className='flex justify-center items-center w-[24%] ml-[20px] mb-[30px]' src="./Images/Vector 1.png" alt="" />
+                            <p className='w-[80%] mb-[30px] text-gray-600'>Professionally fashion flexible relationships and extensible informaties. Appropriately procraastinate 24/365 opportunities rather than bleeding-edge solutions. Completely coordinate end-to-end systems.</p>
+                            <button className='flex justify-center items-center p-[10px] rounded-md text-[13px] text-center font-medium shadow-md text-white hover:bg-[#D38000] bg-[#D37430] animate-bounce sm:w-full md:w-[30%] lg:w-[20%]' type="button"><a href="#contact">Learn More</a></button>
+                        </div>
                     </div>
                 </div>
             </section>
-            <hr className='hh'/>
-            <Footer/>
+            <section id='service'>
+                <div className='grid grid-cols-2 pt-[150px] pb-[50px] pl-[80px]'>
+                    <div>
+                        <h1 className='text-[45px] font-bold mb-[10px] text-[#40455B] w-[70%] leading-[55px]'>Special Menu</h1>
+                        <img className='flex justify-center items-center w-[14%] ml-[20px]' src="./Images/Vector 1.png" alt="" />
+                    </div>
+                    <div>
+                        <ul className='flex justify-center items-center space-x-4'>
+                            <li className='text-[19px]'><a href="">All Item</a></li>
+                            <li className='text-[19px]'><a href="">Chicken</a></li>
+                            <li className='text-[19px]'><a href="">Pizza</a></li>
+                            <li  className='text-[19px]'><a href="">Burger</a></li>
+                            <li className='text-[19px]'><a href="">Soup</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className='grid grid-cols-4 gap-3 pr-[100px] pl-[80px] pb-[100px]'>
+                    <div className='flex flex-col justify-center p-[30px] items-center rounded-md shadow-md border-solid'>
+                        <img className='' src="./Images/m1.jpg" alt="" />
+                        <div className='flex justify-between items-center gap-2 mt-[10px]'>
+                            <div>
+                                <h2 className='text-[20px] mt-[30px] font-bold mb-[30px] text-[#40455B]'>Spaghetti</h2>
+                            </div>
+                            <div className='flex justify-end'>
+                                <img className="w-[20%] mb-[30px] mr-[10px] mt-[30px]" src="./Images/Frame 630369.png" alt="" />
+                                <span className='text-[15px] font-bold mb-[30px] text-[#40455B] mt-[30px]'>9.5</span>
+                            </div>
+                        </div>
+                        <div className='flex justify-between items-center w-full'>
+                            <button className='flex justify-center items-center p-[10px] rounded-md text-[13px] text-center font-medium shadow-md text-white hover:bg-[#D38000] bg-[#D37430] sm:w-full md:w-[30%] lg:w-[45%]' type="button"><a href="#contact">Add to cart</a></button>
+                            <span className='text-[15px] font-bold text-[#40455B]'>$40.90</span>
+                        </div>
+                    </div>
+                    <div className='flex flex-col justify-center p-[30px] items-center rounded-md shadow-md border-solid'>
+                        <img className='' src="./Images/m2.jpg" alt="" />
+                        <div className='flex justify-between items-center gap-2 mt-[10px]'>
+                            <div>
+                                <h2 className='text-[20px] mt-[30px] font-bold mb-[30px] text-[#40455B]'>Spaghetti</h2>
+                            </div>
+                            <div className='flex justify-end'>
+                                <img className="w-[20%] mb-[30px] mr-[10px] mt-[30px]" src="./Images/Frame 630369.png" alt="" />
+                                <span className='text-[15px] font-bold mb-[30px] text-[#40455B] mt-[30px]'>9.5</span>
+                            </div>
+                        </div>
+                        <div className='flex justify-between items-center w-full'>
+                            <button className='flex justify-center items-center p-[10px] rounded-md text-[13px] text-center font-medium shadow-md text-white hover:bg-[#D38000] bg-[#D37430] sm:w-full md:w-[30%] lg:w-[45%]' type="button"><a href="#contact">Add to cart</a></button>
+                            <span className='text-[15px] font-bold text-[#40455B]'>$40.90</span>
+                        </div> 
+                    </div>
+                    <div className='flex flex-col justify-center p-[30px]  items-center rounded-md shadow-md border-solid'>
+                        <img className='w-[85%]' src="./Images/edit/i6.jpg" alt="" />
+                        <div className='flex justify-between items-center gap-2 mt-[20px]'>
+                            <div>
+                                <h2 className='text-[20px] mt-[30px] font-bold mb-[30px] text-[#40455B]'>Spaghetti</h2>
+                            </div>
+                            <div className='flex justify-end'>
+                                <img className="w-[20%] mb-[30px] mr-[10px] mt-[30px]" src="./Images/Frame 630369.png" alt="" />
+                                <span className='text-[15px] font-bold mb-[30px] text-[#40455B] mt-[30px]'>9.5</span>
+                            </div>
+                        </div>
+                        <div className='flex justify-between items-center w-full'>
+                            <button className='flex justify-center items-center p-[10px] rounded-md text-[13px] text-center font-medium shadow-md text-white hover:bg-[#D38000] bg-[#D37430] sm:w-full md:w-[30%] lg:w-[45%]' type="button"><a href="#contact">Add to cart</a></button>
+                            <span className='text-[15px] font-bold text-[#40455B]'>$40.90</span>
+                        </div>
+                    </div>
+                    <div className='flex flex-col justify-center p-[30px]  items-center rounded-md shadow-md border-solid'>
+                        <img className='' src="./Images/m4.jpg" alt="" />
+                        <div className='flex justify-between items-center gap-2 mt-[10px]'>
+                            <div>
+                                <h2 className='text-[20px] mt-[30px] font-bold mb-[30px] text-[#40455B]'>Spaghetti</h2>
+                            </div>
+                            <div className='flex justify-end'>
+                                <img className="w-[20%] mb-[30px] mr-[10px] mt-[30px]" src="./Images/Frame 630369.png" alt="" />
+                                <span className='text-[15px] font-bold mb-[30px] text-[#40455B] mt-[30px]'>9.5</span>
+                            </div>
+                        </div>
+                        <div className='flex justify-between items-center w-full'>
+                            <button className='flex justify-center items-center p-[10px] rounded-md text-[13px] text-center font-medium shadow-md text-white hover:bg-[#D38000] bg-[#D37430] sm:w-full md:w-[30%] lg:w-[45%]' type="button"><a href="#contact">Add to cart</a></button>
+                            <span className='text-[15px] font-bold text-[#40455B]'>$40.90</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div  className='pt-[100px] pb-[50px] pl-[80px]'>
+                    <Swiper
+                        spaceBetween={30}
+                        centeredSlides={true}
+                        autoplay={{delay: 1500,disableOnInteraction: false,}}
+                        pagination={{clickable: true,}}
+                        navigation={true}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        className="mySwiper"
+                        >
+                        <SwiperSlide>
+                            <div className='grid grid-cols-2 cursor-pointer'>
+                                <div className='w-[75%]'>   
+                                    <img className="" src="./Images/m4.jpg" alt="" />
+                                </div>
+                                <div>
+                                    <h1 className='text-[40px] font-bold  text-[#40455B] w-[70%] leading-[55px]'>What Customer Say About Us?</h1>
+                                    <img className='flex justify-center items-center w-[24%] ml-[20px] mb-[30px]' src="./Images/Vector 1.png" alt="" />
+                                    <p className='w-[75%] mb-[30px] text-gray-600'>Assertively coordinate real time functionalities vis-a-vis extensive benefits. Rapidiously grow focused schemas rather than respurce maximizing solutions. Interactively monetize open-source service rather than</p>
+                                    <img className="w-[10%] mb-[10px]" src="./Images/Frame 630368.png" alt="" />
+                                    <h2 className='text-[20px] font-bold  text-[#40455B]'>Melanin</h2>
+                                    <p className='text-[16px] text-gray-500'>Project manager</p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className='grid grid-cols-2 gap-1 cursor-pointer'>
+                                <img className="w-[70%]" src="./Images/m1.jpg" alt="" />
+                                <div>
+                                    <h1 className='text-[40px] font-bold  text-[#40455B] w-[70%] leading-[55px]'>What Customer Say About Us?</h1>
+                                    <img className='flex justify-center items-center w-[24%] ml-[20px] mb-[30px]' src="./Images/Vector 1.png" alt="" />
+                                    <p className='w-[75%] mb-[30px] text-gray-600'>Assertively coordinate real time functionalities vis-a-vis extensive benefits. Rapidiously grow focused schemas rather than respurce maximizing solutions. Interactively monetize open-source service rather than</p>
+                                    <img className="w-[10%] mb-[10px]" src="./Images/Frame 630368.png" alt="" />
+                                    <h2 className='text-[20px] font-bold  text-[#40455B]'>Esther</h2>
+                                    <p className='text-[16px] text-gray-500'>Customer</p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className='grid grid-cols-2 gap-1 cursor-pointer'>
+                                <img className="w-[70%]" src="./Images/m2.jpg" alt="" />
+                                <div>
+                                    <h1 className='text-[40px] font-bold  text-[#40455B] w-[70%] leading-[55px]'>What Customer Say About Us?</h1>
+                                    <img className='flex justify-center items-center w-[24%] ml-[20px] mb-[30px]' src="./Images/Vector 1.png" alt="" />
+                                    <p className='w-[75%] mb-[30px] text-gray-600'>Assertively coordinate real time functionalities vis-a-vis extensive benefits. Rapidiously grow focused schemas rather than respurce maximizing solutions. Interactively monetize open-source service rather than</p>
+                                    <img className="w-[10%] mb-[10px]" src="./Images/Frame 630368.png" alt="" />
+                                    <h2 className='text-[20px] font-bold  text-[#40455B]'>Emeka</h2>
+                                    <p className='text-[16px] text-gray-500'>Director</p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+            </section>
+            <section id='contact' className='pl-[80px] pt-[150px] pb-[150px]'>
+                <div className='cc grid grid-cols-2 gap-4'>
+                    <div>
+                        <h1 className='text-[40px] text-white font-medium'>Join Our Member And Get Bonus Amount Up To 50%</h1>
+                    </div>
+                    <div className='flex justify-center items-center'>
+                        <input type="email" className="inn w-[75%] pl-[13px] pt-[12px] pb-[12px] rounded-md" placeholder='Enter Your Email Here' />
+                        <button className='absolute left-[86.5%] flex justify-center items-center p-[10px] rounded-md text-[13px] text-center font-medium shadow-md  text-white hover:bg-[#D38000] bg-[#D37430] sm:w-full md:w-[30%] lg:w-[7%]' type="submit">Join Now</button>
+                    </div>
+                </div>
+            </section>  
         </>
     )
 }
